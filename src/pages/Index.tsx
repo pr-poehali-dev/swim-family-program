@@ -1,11 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    alert(`Спасибо, ${formData.name}! Мы свяжемся с вами в ближайшее время.`);
+    setFormData({ name: "", phone: "", email: "", message: "" });
+    setIsSubmitting(false);
   };
 
   return (
@@ -379,6 +399,136 @@ const Index = () => {
               Попасть на занятие со скидкой
             </Button>
           </div>
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
+            Наши бассейны
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb6dac0e-c935-4278-a1d4-6f6488c5b019/files/b9225ed5-e21c-496e-8dd0-27e5b41b595b.jpg"
+                alt="Бассейн 1"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white font-semibold text-lg">Спортивный комплекс Яуза</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb6dac0e-c935-4278-a1d4-6f6488c5b019/files/33030d28-1c0f-4fe1-9290-50ddbe7fecc4.jpg"
+                alt="Бассейн 2"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white font-semibold text-lg">Голден Фитнесс</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+              <img 
+                src="https://cdn.poehali.dev/projects/cb6dac0e-c935-4278-a1d4-6f6488c5b019/files/34741911-6a6c-470a-a59f-7be9f8ba54ed.jpg"
+                alt="Бассейн 3"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white font-semibold text-lg">НИУ МГСУ Бассейн</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form" className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+              Записаться на пробное занятие
+            </h2>
+            <p className="text-xl text-gray-600">
+              Оставьте заявку, и мы свяжемся с вами в ближайшее время
+            </p>
+          </div>
+
+          <Card className="shadow-2xl border-2 border-blue-100">
+            <CardContent className="p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Ваше имя *
+                  </label>
+                  <Input
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Введите ваше имя"
+                    className="h-12 text-base"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Телефон *
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="+7 (999) 123-45-67"
+                    className="h-12 text-base"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="your@email.com"
+                    className="h-12 text-base"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Комментарий
+                  </label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="Расскажите о своем уровне подготовки или задайте вопрос"
+                    className="min-h-[120px] text-base"
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full h-14 text-lg font-semibold bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 shadow-xl"
+                >
+                  {isSubmitting ? "Отправка..." : "Записаться на занятие"}
+                </Button>
+
+                <p className="text-sm text-gray-500 text-center">
+                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                </p>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

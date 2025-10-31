@@ -29,14 +29,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-blue-50 to-white">
       <section 
         id="hero" 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-500 via-cyan-400 to-blue-600"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-500 via-blue-500 to-purple-600"
       >
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-wave"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-wave" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-300 rounded-full blur-3xl animate-wave"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-300 rounded-full blur-3xl animate-wave" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-300 rounded-full blur-3xl animate-float"></div>
         </div>
         
         <div className="container mx-auto px-4 z-10 text-center text-white">
@@ -61,7 +62,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="marquee" className="bg-blue-600 py-4 overflow-hidden">
+      <section id="marquee" className="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 py-4 overflow-hidden shadow-2xl">
         <div className="whitespace-nowrap">
           <span className="inline-block animate-marquee text-white text-xl font-semibold uppercase tracking-wider">
             <span className="mx-8">🏊‍♂️ идет набор на ноябрь</span>
@@ -88,7 +89,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="bg-blue-100 p-3 rounded-full">
-                    <Icon name="Heart" className="text-blue-600" size={32} />
+                    <Icon name="Heart" className="text-white" size={32} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800">Адаптация к воде</h3>
@@ -100,11 +101,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-shadow border-2 border-blue-100 hover:border-blue-300">
+            <Card className="hover:shadow-2xl transition-all hover:scale-105 border-2 border-cyan-200 hover:border-cyan-400 bg-gradient-to-br from-white to-cyan-50">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <Icon name="Smile" className="text-blue-600" size={32} />
+                  <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 rounded-full shadow-lg">
+                    <Icon name="Smile" className="text-white" size={32} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800">Любовь к плаванию</h3>
@@ -116,11 +117,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-shadow border-2 border-blue-100 hover:border-blue-300">
+            <Card className="hover:shadow-2xl transition-all hover:scale-105 border-2 border-cyan-200 hover:border-cyan-400 bg-gradient-to-br from-white to-cyan-50">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <Icon name="Target" className="text-blue-600" size={32} />
+                  <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 rounded-full shadow-lg">
+                    <Icon name="Target" className="text-white" size={32} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800">Раскрытие потенциала</h3>
@@ -132,11 +133,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-shadow border-2 border-blue-100 hover:border-blue-300">
+            <Card className="hover:shadow-2xl transition-all hover:scale-105 border-2 border-cyan-200 hover:border-cyan-400 bg-gradient-to-br from-white to-cyan-50">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <Icon name="TrendingUp" className="text-blue-600" size={32} />
+                  <div className="bg-gradient-to-br from-cyan-400 to-blue-500 p-3 rounded-full shadow-lg">
+                    <Icon name="TrendingUp" className="text-white" size={32} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800">Улучшение техники</h3>
@@ -162,7 +163,7 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
                   <div className="bg-cyan-100 p-3 rounded-full flex-shrink-0">
-                    <Icon name="Home" className="text-cyan-600" size={28} />
+                    <Icon name="Home" className="text-white" size={28} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-800">Семейная атмосфера</h3>
@@ -174,11 +175,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-2xl transition-all hover:-translate-y-2">
+            <Card className="bg-gradient-to-br from-white to-blue-50 hover:shadow-2xl transition-all hover:-translate-y-2 hover:scale-105 border-2 border-blue-100">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-100 p-3 rounded-full flex-shrink-0">
-                    <Icon name="Users" className="text-cyan-600" size={28} />
+                  <div className="bg-gradient-to-br from-blue-400 to-cyan-500 p-3 rounded-full flex-shrink-0 shadow-lg">
+                    <Icon name="Users" className="text-white" size={28} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-800">Поддерживающие тренеры</h3>
@@ -190,11 +191,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-2xl transition-all hover:-translate-y-2">
+            <Card className="bg-gradient-to-br from-white to-blue-50 hover:shadow-2xl transition-all hover:-translate-y-2 hover:scale-105 border-2 border-blue-100">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-100 p-3 rounded-full flex-shrink-0">
-                    <Icon name="User" className="text-cyan-600" size={28} />
+                  <div className="bg-gradient-to-br from-blue-400 to-cyan-500 p-3 rounded-full flex-shrink-0 shadow-lg">
+                    <Icon name="User" className="text-white" size={28} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-800">Индивидуальный подход</h3>
@@ -206,11 +207,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white hover:shadow-2xl transition-all hover:-translate-y-2">
+            <Card className="bg-gradient-to-br from-white to-blue-50 hover:shadow-2xl transition-all hover:-translate-y-2 hover:scale-105 border-2 border-blue-100">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-100 p-3 rounded-full flex-shrink-0">
-                    <Icon name="Award" className="text-cyan-600" size={28} />
+                  <div className="bg-gradient-to-br from-blue-400 to-cyan-500 p-3 rounded-full flex-shrink-0 shadow-lg">
+                    <Icon name="Award" className="text-white" size={28} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-800">Фокус на технику</h3>
@@ -235,42 +236,42 @@ const Index = () => {
             <Card className="hover:shadow-2xl transition-all hover:scale-105 border-2 border-gray-200">
               <CardContent className="p-8 text-center">
                 <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Icon name="Droplet" className="text-blue-600" size={40} />
+                  <Icon name="Droplet" className="text-white" size={40} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">Стартовый</h3>
                 <div className="mb-6">
-                  <div className="text-5xl font-bold text-blue-600 mb-2">4200₽</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent mb-2">4200₽</div>
                   <div className="text-gray-600">4 занятия</div>
                   <div className="text-sm text-gray-500 mt-2">1050₽ / занятие</div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-all hover:scale-105 border-4 border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-6 py-2 rounded-full font-semibold">
+            <Card className="hover:shadow-2xl transition-all hover:scale-110 border-4 border-yellow-400 relative bg-gradient-to-br from-yellow-50 to-cyan-50 shadow-xl">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full font-semibold shadow-lg animate-pulse">
                 Популярный
               </div>
               <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Icon name="Waves" className="text-blue-600" size={40} />
+                <div className="bg-gradient-to-br from-cyan-400 to-blue-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse-glow">
+                  <Icon name="Waves" className="text-white" size={40} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">Оптимальный</h3>
                 <div className="mb-6">
-                  <div className="text-5xl font-bold text-blue-600 mb-2">7800₽</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-2">7800₽</div>
                   <div className="text-gray-600">8 занятий</div>
                   <div className="text-sm text-gray-500 mt-2">975₽ / занятие</div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-all hover:scale-105 border-2 border-gray-200">
+            <Card className="hover:shadow-2xl transition-all hover:scale-110 border-4 border-purple-300 bg-gradient-to-br from-white to-purple-50">
               <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Icon name="Zap" className="text-blue-600" size={40} />
+                <div className="bg-gradient-to-br from-purple-400 to-pink-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl animate-pulse-glow">
+                  <Icon name="Zap" className="text-white" size={40} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">Выгодный</h3>
                 <div className="mb-6">
-                  <div className="text-5xl font-bold text-blue-600 mb-2">9900₽</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent mb-2">9900₽</div>
                   <div className="text-gray-600">12 занятий</div>
                   <div className="text-sm text-gray-500 mt-2">825₽ / занятие</div>
                 </div>
@@ -278,7 +279,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <Card className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white">
+          <Card className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 text-white shadow-2xl">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 text-center">После покупки абонемента вы получаете:</h3>
               <div className="grid md:grid-cols-3 gap-6">

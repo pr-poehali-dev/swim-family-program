@@ -313,7 +313,7 @@ const Index = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/7305a631-8c74-4b40-ae09-c55c0020d5e9.JPG"
                     alt="Очагов Антон Владиславович"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-gray-800">Очагов Антон Владиславович</h3>

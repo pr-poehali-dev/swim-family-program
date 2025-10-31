@@ -75,6 +75,44 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="kids-photos" className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
+            Наши ученики в действии
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105 border-4 border-cyan-200">
+              <img 
+                src="https://cdn.poehali.dev/files/e2e5a2ba-bf08-4f1e-90e9-09d73b2f3705.jpg"
+                alt="Дети на тренировке"
+                className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-cyan-900/20 to-transparent flex items-end p-8">
+                <div>
+                  <h3 className="text-white font-bold text-2xl mb-2">Групповые занятия</h3>
+                  <p className="text-white/90 text-lg">Дружная атмосфера и взаимная поддержка</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all hover:scale-105 border-4 border-blue-200">
+              <img 
+                src="https://cdn.poehali.dev/files/922106c3-5f0d-4adb-b5fa-629d2d16bf97.jpg"
+                alt="Дети учатся плавать"
+                className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent flex items-end p-8">
+                <div>
+                  <h3 className="text-white font-bold text-2xl mb-2">Индивидуальный подход</h3>
+                  <p className="text-white/90 text-lg">Каждый ребенок получает внимание тренера</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="methodology" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-800">

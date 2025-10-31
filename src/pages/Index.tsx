@@ -311,8 +311,8 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="aspect-square bg-gradient-to-br from-blue-200 to-cyan-200 rounded-lg mb-6 overflow-hidden">
                   <img 
-                    src="https://cdn.poehali.dev/projects/cb6dac0e-c935-4278-a1d4-6f6488c5b019/files/bec3be06-0103-4a04-8017-0aec3627681a.jpg"
-                    alt="Тренер"
+                    src="https://cdn.poehali.dev/files/7305a631-8c74-4b40-ae09-c55c0020d5e9.JPG"
+                    alt="Очагов Антон Владиславович"
                     className="w-full h-full object-cover"
                   />
                 </div>
